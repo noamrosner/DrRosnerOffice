@@ -35,8 +35,9 @@ def formatFile():
         sheet[f"B{i}"].value = sheet["B2"].value
     for i in range(2, sheet.max_row):
         try:
-            sheet[f"C{i}"].value = str([f"C{i}"].sheet[f"C{i}"].value)
-            sheet[f"C{i}"].value = sheet[f"C{i}"].value.replace(" ", '')
+            if sheet[f"C{i}"].value[0] == ' ':
+                sheet[f"C{i}"].value = sheet[f"C{i}"].value[1:]
+                print(f"Changed C{i}")
         except AttributeError:
             print(f"C{i} ; Spaces replacement gone wrong")
         try:
@@ -103,6 +104,21 @@ def maccabiMessage(date, day, time, name):
                f"מרפאתו של ד״ר רוזנר ")
         return msg
 
+def phoneMessage(date, day, time, name):
+    msg = (f"\n"
+           f" שלום {name},\n"
+           f"זו תזכורת מהמרפאה של ד״ר רוזנר לתור "
+           f"שנקבע לך ליום {day} {date} בשעה {time}\n"
+           f"\n"
+           f"\n התור הינו תור טלפוני"
+           f""
+           f"\n אודה לאישור התור"
+           f"\n"
+           f"\n"
+           f"בברכה,\n"
+           f"מרפאתו של ד״ר רוזנר ")
+    return msg
+
 def cleanList():
     try:
         for i in range(2, sheet.max_row):
@@ -124,5 +140,5 @@ def office():
     formatFile()
     #maacabiSendToList()
 
-if __name__ == "__main__":
-    office()
+"""if __name__ == "__main__":
+    office()"""
