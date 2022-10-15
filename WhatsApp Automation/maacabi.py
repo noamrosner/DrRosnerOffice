@@ -59,9 +59,10 @@ def maccabiAskFile():
             print(
                 "\n--------------------------------------------------------------------------------------------------------"
                 "-\n")
-            break
+            return 1
         except openpyxl.utils.exceptions.InvalidFileException:
-            print("Fix this")
+            print("Abort!")
+            return 0
         except NameError:
             print("Wrong file, not a xlsx file")
         except TypeError:
@@ -136,9 +137,9 @@ def compareList(list1, list2):
     print()
     
 def office():
-    maccabiAskFile()
-    formatFile()
-    #maacabiSendToList()
+    if maccabiAskFile() == 1:
+        formatFile()
+        maacabiSendToList()
 
 """if __name__ == "__main__":
     office()"""
