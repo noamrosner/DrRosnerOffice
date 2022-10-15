@@ -88,7 +88,7 @@ def ramatHahyalSendToList():
             sheet[f"I{i}"].value = "NOT SENT"
     wb.save(filename)
 
-def rannanaSendToList():
+def raananaSendToList():
     global sheet
     global wb
     global filename
@@ -122,16 +122,18 @@ def ramatHahyalAskFile():
             print(
                 "\n--------------------------------------------------------------------------------------------------------"
                 "-\n")
-            break
+            print(filename)
+            return 1
         except openpyxl.utils.exceptions.InvalidFileException:
-            print("Fix this")
+            print("Abort!")
+            return 0
         except NameError:
             print("Wrong file, not a xlsx file")
         except TypeError:
             print("Wrong file, not a xlsx file")
 
 
-def rannanaAskFile():
+def raananaAskFile():
     global sheet
     global wb
     global filename
@@ -144,23 +146,46 @@ def rannanaAskFile():
             print(
                 "\n--------------------------------------------------------------------------------------------------------"
                 "-\n")
-            break
+            return 1
         except openpyxl.utils.exceptions.InvalidFileException:
-            print("Fix this")
+            print("Abort!")
+            return 0
         except NameError:
             print("Wrong file, not a xlsx file")
         except TypeError:
             print("Wrong file, not a xlsx file")
 
+def raananaFixedFile(filename):
+    global sheet
+    global wb
+    wb = openpyxl.load_workbook(f'{filename}')
+    sheet = wb['רעננה']
+    print(f"Opening {filename}!\n")
+
+def singleReminderRamatHahayal():
+    global sheet
+    if ramatHahyalAskFile() == 1:
+        sheet = wb["יחידרמח"]
+        ramatHahyalSendToList()
+
+def singleReminderRaanana():
+    global sheet
+    if raananaAskFile() == 1:
+        sheet = wb["יחידרעננה"]
+        raananaSendToList()
 
 def ramatHahyal():
-    ramatHahyalAskFile()
-    ramatHahyalSendToList()
+    if ramatHahyalAskFile() == 1:
+        ramatHahyalSendToList()
 
-def rannana():
-    rannanaAskFile()
-    rannanaSendToList()
+def raanana():
+    if raananaAskFile() == 1:
+        raananaSendToList()
 
-if __name__ == "__main__":
-    #ramatHahyal()
-    rannana()
+def bdikot():
+    ramatHahyal()
+    raananaFixedFile(filename)
+
+"""if __name__ == "__main__":
+    ramatHahyal()
+    rannana()"""
