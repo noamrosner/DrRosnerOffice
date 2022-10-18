@@ -24,6 +24,8 @@ Including:
      
  The program can handle with issues that can be caused from the user's behavior and bad input.
  The program will notify at the end if some users haven't recieved the reminder and will alert what caused the specific issue.  
+ 
+ The program is written in Python, using "openpyxl" for handling with XLSX file, "tkinter" for the UI and "pywhatkit" for sending WhatsApp messages.
    
 
 <br /><br /><br /><br /><br />
