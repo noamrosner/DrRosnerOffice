@@ -29,5 +29,5 @@ Including:
 
 - Breath Results Automation
 
-   The results are seen in an Excel file (xlsx), the program can go over the file while printing the relevant information for analysis.
+   The results are seen in an Excel file (xlsx), the program can go over the file while printing the relevant information for the doctor to review.
    The program will add the Doctor's recommendation and the signature in the appropriate place.
