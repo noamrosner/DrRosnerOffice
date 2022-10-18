@@ -16,7 +16,11 @@ Including:
 ![Screen Shot 2022-10-18 at 12 56 39](https://user-images.githubusercontent.com/95490556/196399228-76e6477a-c9a8-4537-abd9-c8e0f3de6bfd.png)
 
    The program will open WhatsApp and send the messages, each message containg the relevant information as specified in the code, the patient's name, the date and time of the appointment and other relevant information.
+   
+   For example a template of appotiments for procedures:![Screen Shot 2022-10-18 at 13 05 47](https://user-images.githubusercontent.com/95490556/196401398-e5373d82-040a-49f8-8130-e48ac3459d76.png)
 
+   
+   
 
 
 - Breath Results Automation
