@@ -1,8 +1,8 @@
 # Doctor's Office Automation
 <br />
 <br />
-Created severaloffice automations to make the work in the office easier.
-
+Created severaloffice automations to make the work in the office easier. <br /><br />
+ 
 Including:
 - WhatsApp Appotiment Reminder
 
@@ -25,6 +25,7 @@ Including:
  The program can handle with issues that can be caused from the user's behavior and bad input.
  The program will notify at the end if some users haven't recieved the reminder and will alert what caused the specific issue.  
  
+<br />
  The program is written in Python, using "openpyxl" for handling with XLSX file, "tkinter" for the UI and "pywhatkit" for sending WhatsApp messages.
    
 
