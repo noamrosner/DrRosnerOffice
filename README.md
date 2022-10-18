@@ -3,9 +3,7 @@
 Created severaloffice automations to make the work in the office easier.
 
 Including:
-- WhatsApp Appotiment Reminder![Screen Shot 2022-10-18 at 12 52 55](https://user-images.githubusercontent.com/95490556/196398542-b3dac571-c77e-49c8-8def-c28d2e23cc48.png)
-
-
+- WhatsApp Appotiment Reminder
 
    The office is working with several Excel files (xlsx) to handle appointemts for procedures and for regular appointments in the office.
    The program is a simple minimal window with several buttons for each of the different reminder options.
@@ -13,7 +11,7 @@ Including:
    
    The program will open WhatsApp and send the messages, each message containg the relevant information as specified in the code, the patient's name, the date and time of the appointment and other relevant information.
    
-
+![Screen Shot 2022-10-18 at 12 52 55](https://user-images.githubusercontent.com/95490556/196398542-b3dac571-c77e-49c8-8def-c28d2e23cc48.png)
 
 - Breath Results Automation
 
