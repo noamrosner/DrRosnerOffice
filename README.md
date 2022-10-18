@@ -13,6 +13,8 @@ Including:
    
 ![Screen Shot 2022-10-18 at 12 52 55](https://user-images.githubusercontent.com/95490556/196398542-b3dac571-c77e-49c8-8def-c28d2e23cc48.png)
 
+   After choosing the action and pressing the button accordingly a window will pop up, where the user can choose the relevant file.
+
 ![Screen Shot 2022-10-18 at 12 56 39](https://user-images.githubusercontent.com/95490556/196399228-76e6477a-c9a8-4537-abd9-c8e0f3de6bfd.png)
 
 
