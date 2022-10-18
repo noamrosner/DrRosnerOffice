@@ -26,18 +26,40 @@ def fillList():
         print(f"error with index {i}")
     wb.save(filename)
 
+def getMaxRow():
+    global maxRow
+    maxRow = 2
+    for i in range(2, sheet.max_row):
+        if type(sheet[f"D{i}"].value) == str:
+            maxRow = maxRow + 1
+        else:
+            if type(sheet[f"D{i+1}"].value) == str:
+                maxRow = maxRow + 1
+                continue
+            if type(sheet[f"D{i+2}"].value) == str:
+                maxRow = maxRow + 2
+                continue
+            else:
+                break
+    print(f"Max Row is {maxRow}")
+    return maxRow
 
 def formatFile():
     # fill first date, day manually
-    for i in range(2, sheet.max_row):
+    maxRow = getMaxRow()
+    for i in range(2, maxRow):
         sheet[f"A{i}"].value = sheet["A2"].value
-    for i in range(2, sheet.max_row):
+    for i in range(2, maxRow):
         sheet[f"B{i}"].value = sheet["B2"].value
-    for i in range(2, sheet.max_row):
+    for i in range(2, maxRow):
+        if (type(sheet[f"D{i}"].value) != str):
+            continue
         try:
             if sheet[f"C{i}"].value[0] == ' ':
                 sheet[f"C{i}"].value = sheet[f"C{i}"].value[1:]
                 print(f"Changed C{i}")
+        except TypeError:
+            print(f"C{i} ; Spaces replacement gone wrong")
         except AttributeError:
             print(f"C{i} ; Spaces replacement gone wrong")
         try:
@@ -50,6 +72,7 @@ def maccabiAskFile():
     global sheet
     global wb
     global filename
+    global maxRow
     while True:
         try:
             filename = askopenfilename()
@@ -72,16 +95,29 @@ def maacabiSendToList():
     global sheet
     global wb
     global filename
-    for i in range(2, sheet.max_row):
-        try:
-            msg = maccabiMessage(sheet[f"A{i}"].value.strftime("%d/%m/%Y"), sheet[f"B{i}"].value, sheet[f"C{i}"].value.strftime("%H:%M")
-                                 , sheet[f"D{i}"].value)
-            validPhone(f'{sheet[f"F{i}"].value}')
-            sendMessage(validPhone(sheet[f"G{i}"].value), msg)
-            sheet[f"I{i}"].value = "Sent successfully"
-        except Exception as e:
-            print(e)
-            sheet[f"I{i}"].value = "NOT SENT"
+    global maxRow
+    for i in range(2, maxRow):
+        if sheet[f"E{i}"].value == "תור טלפוני":
+            try:
+                msg = phoneMessage(sheet[f"A{i}"].value.strftime("%d/%m/%Y"), sheet[f"B{i}"].value,
+                                     sheet[f"C{i}"].value.strftime("%H:%M")
+                                     , sheet[f"D{i}"].value)
+                validPhone(f'{sheet[f"F{i}"].value}')
+                sendMessage(validPhone(sheet[f"G{i}"].value), msg)
+                sheet[f"I{i}"].value = "Sent successfully"
+            except Exception as e:
+                print(e)
+                sheet[f"I{i}"].value = "NOT SENT"
+        else:
+            try:
+                msg = maccabiMessage(sheet[f"A{i}"].value.strftime("%d/%m/%Y"), sheet[f"B{i}"].value, sheet[f"C{i}"].value.strftime("%H:%M")
+                                     , sheet[f"D{i}"].value)
+                validPhone(f'{sheet[f"F{i}"].value}')
+                sendMessage(validPhone(sheet[f"G{i}"].value), msg)
+                sheet[f"I{i}"].value = "Sent successfully"
+            except Exception as e:
+                print(e)
+                sheet[f"I{i}"].value = "NOT SENT"
     wb.save(filename)
 
 def maccabiMessage(date, day, time, name):
@@ -108,7 +144,7 @@ def maccabiMessage(date, day, time, name):
 def phoneMessage(date, day, time, name):
     msg = (f"\n"
            f" שלום {name},\n"
-           f"זו תזכורת מהמרפאה של ד״ר רוזנר לתור "
+           f"זו תזכורת מהמרפאה של ד״ר רוזנר לתור טלפוני "
            f"שנקבע לך ליום {day} {date} בשעה {time}\n"
            f"\n"
            f"\n התור הינו תור טלפוני"
