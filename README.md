@@ -3,9 +3,9 @@
 Created severaloffice automations to make the work in the office easier.
 
 Including:
-- WhatsApp Appotiment Reminder
+- WhatsApp Appotiment Reminder![Screen Shot 2022-10-18 at 12 52 55](https://user-images.githubusercontent.com/95490556/196398542-b3dac571-c77e-49c8-8def-c28d2e23cc48.png)
 
-https://user-images.githubusercontent.com/95490556/196398365-f3e80bb6-97db-40d2-a3cb-b5c7eb6db46c.png
+
 
    The office is working with several Excel files (xlsx) to handle appointemts for procedures and for regular appointments in the office.
    The program is a simple minimal window with several buttons for each of the different reminder options.
