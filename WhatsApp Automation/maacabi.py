@@ -1,31 +1,6 @@
 
 from bdikot import *
 
-def fillList():
-    sheet2 = wb['אחרי']
-    j = 2
-    try:
-        for i in range(1, sheet.max_row-3, 6):
-            lst1 = sheet[f"A{i}"].value.split()
-            print(lst1)
-            lst2 = sheet[f"A{i+1}"].value.split()
-            print(lst2)
-            lst3 = sheet[f"A{i + 2}"].value.split()
-            print(lst3)
-            sheet2[f"A{j}"].value = f"{lst1[0]}"
-            sheet2[f"B{j}"].value = sheet2[f"B2"].value
-            sheet2[f"C{j}"].value = sheet2[f"C2"].value
-            sheet2[f"D{j}"].value = f"{lst1[1]}"
-            sheet2[f"E{j}"].value = f"{lst1[2]}"
-            sheet2[f"F{j}"].value = f"{lst1[-1]}"
-            sheet2[f"G{j}"].value = f"{lst2[1]} {lst2[2]}"
-            sheet2[f"H{j}"].value = f"{lst3[1]}"
-            j = j+1
-            print(j)
-    except AttributeError:
-        print(f"error with index {i}")
-    wb.save(filename)
-
 def getMaxRow():
     global maxRow
     maxRow = 2
@@ -176,6 +151,3 @@ def office():
     if maccabiAskFile() == 1:
         formatFile()
         maacabiSendToList()
-
-"""if __name__ == "__main__":
-    office()"""
