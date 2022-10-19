@@ -185,7 +185,4 @@ def raanana():
 def bdikot():
     ramatHahyal()
     raananaFixedFile(filename)
-
-"""if __name__ == "__main__":
-    ramatHahyal()
-    rannana()"""
+    raananaSendToList()
