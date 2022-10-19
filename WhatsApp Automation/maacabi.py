@@ -16,11 +16,9 @@ def getMaxRow():
                 continue
             else:
                 break
-    print(f"Max Row is {maxRow}")
     return maxRow
 
 def formatFile():
-    # fill first date, day manually
     maxRow = getMaxRow()
     for i in range(2, maxRow):
         sheet[f"A{i}"].value = sheet["A2"].value
@@ -52,7 +50,7 @@ def maccabiAskFile():
         try:
             filename = askopenfilename()
             wb = openpyxl.load_workbook(f'{filename}')
-            sheet = wb['לפני']
+            sheet = wb['מכבי']
             print(f"Opening {filename}!\n")
             print(
                 "\n--------------------------------------------------------------------------------------------------------"
@@ -130,22 +128,6 @@ def phoneMessage(date, day, time, name):
            f"בברכה,\n"
            f"מרפאתו של ד״ר רוזנר ")
     return msg
-
-def cleanList():
-    try:
-        for i in range(2, sheet.max_row):
-            val = sheet[f"G{i}"].value.split()
-            sheet[f"G{i}"].value = val[1]
-    except AttributeError:
-        print(f"Error with index {i}")
-        print(sheet.max_row)
-    except Exception as e:
-        print(e)
-    wb.save(filename)
-
-
-def compareList(list1, list2):
-    print()
     
 def office():
     if maccabiAskFile() == 1:
