@@ -18,7 +18,7 @@ Created several office automations to make the work in the office easier. <br />
  
 ![Screen Shot 2022-10-18 at 13 05 47](https://user-images.githubusercontent.com/95490556/196401398-e5373d82-040a-49f8-8130-e48ac3459d76.png)  
 <br />
- The program will iritate through the rows and will send each patient a reminder.
+ The program will itirate through the rows and will send each patient a reminder.
      The program will open WhatsApp and send the messages, each message containg the relevant information as specified in the code, the patient's name, the date and time of the appointment and other relevant information.  
      
  The program can handle with issues that can be caused from the user's behavior and bad input.
