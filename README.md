@@ -10,6 +10,8 @@ WhatsApp Appotiment Reminder
   -	A window will pop up and the user can choose the relevant excel file
   -	The program will open the chosen file (i.e., template of appointments for consultation or other services at relevant medical facilities)
   reminder to each patient by opening WhatsApp
+  
+ The program's main window
 
 ![Screen Shot 2022-10-18 at 12 52 55](https://user-images.githubusercontent.com/95490556/196398542-b3dac571-c77e-49c8-8def-c28d2e23cc48.png)
 
