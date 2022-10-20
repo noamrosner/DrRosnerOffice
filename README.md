@@ -1,13 +1,17 @@
 # Doctor's Office Automation
 <br />
-Created several office automations to make the work in the office easier. <br /><br />
+Created automations to enhance efficiency and improve patient services in a medical office setting. <br /><br />
  
 - WhatsApp Appotiment Reminder
 
-   The office is working with several Excel files (xlsx) to handle appointemts for procedures and for regular appointments in the office.
-   The program is a simple minimal window with several buttons for each of the different reminder options.
-   The secretary can press on the wanted button and choose the file containting the relevant information.
-   
+  •	Medical practice provides a wide range of services at a number of facilities to a large patient population
+  •	Patient appointments are recorded in dedicated excel files (xlsx) depending on the service (e.g., consultation, procedure, etc) and its location/relevant medical facility (e.g., Private Clinics and various Medical Centers)
+  •	The program is a simple minimal window with buttons representing each of the reminder options
+  •	The user can choose the desired action, and press the corresponding button 
+  •	A window will pop up and the user can choose/access the relevant excel file
+  •	The program will open the chosen file (i.e., template of appointments for consultation or other services at relevant medical facilities)
+  •	The program with then iterate through the rows and will send an appointment 
+
 ![Screen Shot 2022-10-18 at 12 52 55](https://user-images.githubusercontent.com/95490556/196398542-b3dac571-c77e-49c8-8def-c28d2e23cc48.png)
 
  After choosing the action and pressing the button accordingly a window will pop up, where the user can choose the relevant file.
