@@ -11,8 +11,7 @@ WhatsApp Appotiment Reminder
   -	The program will open the chosen file (i.e., template of appointments for consultation or other services at relevant medical facilities)
   reminder to each patient by opening WhatsApp
   
- The program's main window
-
+ The program's main window </br>
 ![Screen Shot 2022-10-18 at 12 52 55](https://user-images.githubusercontent.com/95490556/196398542-b3dac571-c77e-49c8-8def-c28d2e23cc48.png)
 
  After choosing the action and pressing the button accordingly a window will pop up, where the user can choose the relevant file.
