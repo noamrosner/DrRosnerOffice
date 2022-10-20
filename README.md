@@ -2,15 +2,14 @@
 <br />
 Created automations to enhance efficiency and improve patient services in a medical office setting. <br /><br />
  
-- WhatsApp Appotiment Reminder
-
-  •	Medical practice provides a wide range of services at a number of facilities to a large patient population
-  •	Patient appointments are recorded in dedicated excel files (xlsx) depending on the service (e.g., consultation, procedure, etc) and its location/relevant medical facility (e.g., Private Clinics and various Medical Centers)
-  •	The program is a simple minimal window with buttons representing each of the reminder options
-  •	The user can choose the desired action, and press the corresponding button 
-  •	A window will pop up and the user can choose/access the relevant excel file
-  •	The program will open the chosen file (i.e., template of appointments for consultation or other services at relevant medical facilities)
-  •	The program with then iterate through the rows and will send an appointment 
+WhatsApp Appotiment Reminder
+  -	Medical practice provides a wide range of services at a number of facilities to a large patient population
+  -	Patient appointments are recorded in dedicated excel files (xlsx) depending on the service (e.g., consultation, procedure, etc) and its location/relevant medical facility (e.g., Private Clinics and various Medical Centers)
+  -	The program is a simple minimal window with buttons representing each of the reminder options
+  -	The user can choose the desired action, and press the corresponding button 
+  -	A window will pop up and the user can choose/access the relevant excel file
+  -	The program will open the chosen file (i.e., template of appointments for consultation or other services at relevant medical facilities)
+  -	The program with then iterate through the rows and will send an appointment 
 
 ![Screen Shot 2022-10-18 at 12 52 55](https://user-images.githubusercontent.com/95490556/196398542-b3dac571-c77e-49c8-8def-c28d2e23cc48.png)
 
