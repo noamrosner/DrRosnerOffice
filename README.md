@@ -7,7 +7,7 @@ WhatsApp Appotiment Reminder
   -	Patient appointments are recorded in dedicated excel files (xlsx) depending on the service (e.g., consultation, procedure, etc) and its location/relevant medical facility (e.g., Private Clinics and various Medical Centers)
   -	The program is a simple minimal window with buttons representing each of the reminder options
   -	The user can choose the desired action, and press the corresponding button 
-  -	A window will pop up and the user can choose/access the relevant excel file
+  -	A window will pop up and the user can choose the relevant excel file
   -	The program will open the chosen file (i.e., template of appointments for consultation or other services at relevant medical facilities)
   reminder to each patient by opening WhatsApp
 
