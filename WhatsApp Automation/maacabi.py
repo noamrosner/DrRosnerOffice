@@ -25,12 +25,11 @@ def formatFile():
     for i in range(2, maxRow):
         sheet[f"B{i}"].value = sheet["B2"].value
     for i in range(2, maxRow):
-        if (type(sheet[f"D{i}"].value) != str):
+        if type(sheet[f"D{i}"].value) != str:
             continue
         try:
-            if sheet[f"C{i}"].value[0] == ' ':
-                sheet[f"C{i}"].value = sheet[f"C{i}"].value[1:]
-                print(f"Changed C{i}")
+            sheet[f"C{i}"].value = sheet[f"C{i}"].value.replace(" ", '')
+            print(f"Changed C{i}")
         except TypeError:
             print(f"C{i} ; Spaces replacement gone wrong")
         except AttributeError:
@@ -73,8 +72,7 @@ def maacabiSendToList():
         if sheet[f"E{i}"].value == "תור טלפוני":
             try:
                 msg = phoneMessage(sheet[f"A{i}"].value.strftime("%d/%m/%Y"), sheet[f"B{i}"].value,
-                                     sheet[f"C{i}"].value.strftime("%H:%M")
-                                     , sheet[f"D{i}"].value)
+                                     sheet[f"C{i}"].value, sheet[f"D{i}"].value)
                 validPhone(f'{sheet[f"F{i}"].value}')
                 sendMessage(validPhone(sheet[f"G{i}"].value), msg)
                 sheet[f"I{i}"].value = "Sent successfully"
@@ -83,8 +81,8 @@ def maacabiSendToList():
                 sheet[f"I{i}"].value = "NOT SENT"
         else:
             try:
-                msg = maccabiMessage(sheet[f"A{i}"].value.strftime("%d/%m/%Y"), sheet[f"B{i}"].value, sheet[f"C{i}"].value.strftime("%H:%M")
-                                     , sheet[f"D{i}"].value)
+                msg = maccabiMessage(sheet[f"A{i}"].value.strftime("%d/%m/%Y"), sheet[f"B{i}"].value,
+                                     sheet[f"C{i}"].value, sheet[f"D{i}"].value)
                 validPhone(f'{sheet[f"F{i}"].value}')
                 sendMessage(validPhone(sheet[f"G{i}"].value), msg)
                 sheet[f"I{i}"].value = "Sent successfully"
