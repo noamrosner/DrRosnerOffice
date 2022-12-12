@@ -2,7 +2,7 @@
 <br />
 Created automations to enhance efficiency and improve patient services in a medical office setting. <br /><br />
  
-WhatsApp Appotiment Reminder
+## WhatsApp Appotiment Reminder ##
   -	Medical practice provides a wide range of services at a number of facilities to a large patient population
   -	Patient appointments are recorded in dedicated excel files (xlsx) depending on the service (e.g., consultation, procedure, etc) and its location/relevant medical facility (e.g., Private Clinics and various Medical Centers)
   -	The program is a simple minimal window with buttons representing each of the reminder options
@@ -33,7 +33,7 @@ WhatsApp Appotiment Reminder
    
 
 <br /><br /><br /><br /><br />
-- Breath Results Automation
+## Breath Results Automation ##
 
    The results are seen in an Excel file (xlsx), the program can go over the file while printing the relevant information for the doctor to review.
    The program will add the Doctor's recommendation and the signature in the appropriate place.
