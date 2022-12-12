@@ -1,5 +1,5 @@
 from mail import *
-from papa import *
+from sibo import *
 from tkinter import *
 from tkinter import filedialog
 from os import walk
