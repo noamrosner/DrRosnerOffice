@@ -13,7 +13,7 @@ warnings.filterwarnings("ignore")
 # info
 email_sender = 'SENDEREMAILADDRESS'
 email_password = 'PASSWORD'
-attachment_dir = "/Users/USERNAME/../"
+attachment_dir = "/Path/to/dir/../"
 # attachment_dir = filedialog.askdirectory()
 
 def login():
