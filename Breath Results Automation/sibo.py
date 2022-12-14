@@ -32,9 +32,8 @@ def greetings(file):
         CH4 = False
         print(f"Opening {filename}!\n")
         print("\n---------------------------------------------------------------------------------------------------------\n")
-
     except openpyxl.utils.exceptions.InvalidFileException:
-        runAgain()
+        print("Openpyxl error")
     except NameError:
         print("Wrong file, not a xlsx file")
     except TypeError:
@@ -71,7 +70,7 @@ def getH2():
             print(f"sheet[index].value is {sheet[index].value}")
             print(f"maxH2 is {maxH2}\n")
 
-    if maxH2 - minH2 >= 20:
+    if maxH2 - minH2 > 20:
         H2 = True
 
 def getCH4():
@@ -105,7 +104,7 @@ def getCH4():
             print(f"sheet[index].value is {sheet[index].value}")
             print(f"maxCH4 is {maxCH4}\n")
 
-    if maxCH4 - minCH4 >= 15 or maxCH4 >= 3:
+    if maxCH4 > 10: # or maxCH4 - minCH4 >= 15:
         CH4 = True
 
 def checkValues():
@@ -131,7 +130,9 @@ def checkValues():
 
 def addImage():
     sheet = wb['Lactulose SIBO']
-    img = Image("signature.png")
+    img = Image("signature.jpg")
+    img.width = 500
+    img.height = 300
     sheet.add_image(img, 'B60')
     wb.save(filename=filename)
 
