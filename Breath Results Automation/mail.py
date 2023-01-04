@@ -13,8 +13,8 @@ warnings.filterwarnings("ignore")
 # info
 email_sender = 'SENDEREMAILADDRESS'
 email_password = 'PASSWORD'
-attachment_dir = "/Path/to/dir/../"
-# attachment_dir = filedialog.askdirectory()
+# attachment_dir = "/Path/to/dir/../"
+attachment_dir = f"{filedialog.askdirectory()}/"
 
 def login():
     global con
